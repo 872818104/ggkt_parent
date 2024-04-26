@@ -10,11 +10,12 @@ import com.tencentcloudapi.vod.v20180717.VodClient;
 import com.tencentcloudapi.vod.v20180717.models.DeleteMediaRequest;
 import com.tencentcloudapi.vod.v20180717.models.DeleteMediaResponse;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
 public class VodServiceImpl implements VodService {
-    private Logger logger;
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public String uploadVideo() {

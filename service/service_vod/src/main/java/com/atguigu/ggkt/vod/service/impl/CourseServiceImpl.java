@@ -14,7 +14,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -35,20 +34,23 @@ import java.util.Map;
 @Slf4j
 public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> implements CourseService {
 
-    @Autowired
-    private TeacherService teacherService;
+    private final TeacherService teacherService;
 
-    @Autowired
-    private SubjectService subjectService;
+    private final SubjectService subjectService;
 
-    @Autowired
-    private CourseDescriptionService descriptionService;
+    private final CourseDescriptionService descriptionService;
 
-    @Autowired
-    private VideoService videoService;
+    private final VideoService videoService;
 
-    @Autowired
-    private ChapterService chapterService;
+    private final ChapterService chapterService;
+
+    public CourseServiceImpl(ChapterService chapterService, TeacherService teacherService, SubjectService subjectService, CourseDescriptionService descriptionService, VideoService videoService) {
+        this.chapterService = chapterService;
+        this.teacherService = teacherService;
+        this.subjectService = subjectService;
+        this.descriptionService = descriptionService;
+        this.videoService = videoService;
+    }
 
     @Override
     public Map<String, Object> findPage(Page<Course> coursePage, CourseQueryVo courseQueryVo) {
@@ -116,7 +118,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
 
 
     // 获取讲师和分类名称
-    public Course getTeacherOrSubjectName(Course course) {
+    public void getTeacherOrSubjectName(Course course) {
 
         // 根据讲师id获取讲师姓名
         Teacher teacher = teacherService.getById(course.getTeacherId());
@@ -134,12 +136,11 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         }
 
         // 2.二级分类
-        Subject subject = subjectService.getById(course.getSubjectParentId());
-        if (!StringUtils.isEmpty(subject)) {
-            String title = subject.getTitle();
+        Subject subject2 = subjectService.getById(course.getSubjectParentId());
+        if (!StringUtils.isEmpty(subject2)) {
+            String title = subject2.getTitle();
             course.getParam().put("subjectParentTitle", title);
         }
-        return course;
     }
 
 

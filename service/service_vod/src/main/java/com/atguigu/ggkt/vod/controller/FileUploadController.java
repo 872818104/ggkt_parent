@@ -17,6 +17,7 @@ public class FileUploadController {
     @Autowired
     private FileService fileService;
 
+    //文件上传
     @ApiOperation("文件上传")
     @PostMapping("upload")
     public Result uploadFile(@RequestParam("file") MultipartFile file) {

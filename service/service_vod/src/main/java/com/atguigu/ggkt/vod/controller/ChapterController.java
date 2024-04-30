@@ -34,7 +34,11 @@ public class ChapterController {
     @GetMapping("getChapterTreeList/{courseId}")
     public Result getChapter(@PathVariable Long courseId) {
         List<ChapterVo> chapterList = chapterService.getChapterTreeList(courseId);
-        return Result.ok(chapterList);
+        if (chapterList == null) {
+            return Result.ok(null);
+        } else {
+            return Result.ok(chapterList);
+        }
     }
 
     //2.添加章节

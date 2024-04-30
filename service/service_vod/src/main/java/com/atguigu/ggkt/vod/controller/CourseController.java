@@ -34,13 +34,7 @@ public class CourseController {
 
     @ApiOperation("点播课程列表")
     @GetMapping("{page}/{limit}")
-    public Result getCourse(
-            @ApiParam(name = "page", value = "当前页码", required = true)
-            @PathVariable Long page,
-            @ApiParam(name = "limit", value = "每页条数", required = true)
-            @PathVariable Long limit,
-            @ApiParam(name = "courseQueryVo", value = "查询对象", required = true)
-            CourseQueryVo courseQueryVo) {
+    public Result getCourse(@ApiParam(name = "page", value = "当前页码", required = true) @PathVariable Long page, @ApiParam(name = "limit", value = "每页条数", required = true) @PathVariable Long limit, @ApiParam(name = "courseQueryVo", value = "查询对象", required = true) CourseQueryVo courseQueryVo) {
         Page<Course> coursePage = new Page<>(page, limit);
         Map<String, Object> map = courseService.findPage(coursePage, courseQueryVo);
         return Result.ok(map);
@@ -90,9 +84,8 @@ public class CourseController {
     //根据id发布课程
     @ApiOperation("根据id发布课程")
     @PutMapping("publishCourseById/{id}")
-    public Result publishCourseById(
-            @ApiParam(value = "课程ID", required = true)
-            @PathVariable Long id) {
+    public Result publishCourseById(@ApiParam(value = "课程ID", required = true)
+                                    @PathVariable Long id) {
         boolean result = courseService.publishCourseById(id);
         return Result.ok(result);
     }

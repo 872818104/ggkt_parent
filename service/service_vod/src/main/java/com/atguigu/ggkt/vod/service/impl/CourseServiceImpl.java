@@ -189,6 +189,7 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         return baseMapper.selectCoursePublishVoById(id);
     }
 
+    //根据id发布课程
     @Override
     public boolean publishCourseById(Long id) {
         Course course = new Course();

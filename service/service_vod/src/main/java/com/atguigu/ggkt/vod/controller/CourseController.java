@@ -17,10 +17,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 /**
- * <p>
- * 课程 前端控制器
- * </p>
- *
  * @author cc
  * @since 2024-03-29
  */
@@ -63,7 +59,6 @@ public class CourseController {
         courseService.updateByCourse(courseFormVo);
         return Result.ok(courseFormVo.getId());
     }
-
 
     //删除课程信息
     @ApiOperation("删除课程信息")

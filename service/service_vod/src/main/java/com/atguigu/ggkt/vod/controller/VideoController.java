@@ -26,28 +26,28 @@ public class VideoController {
     @Autowired
     private VideoService videoService;
 
-    @ApiOperation(value = "获取")
+    @ApiOperation(value = "获取章节视频信息")
     @GetMapping("get/{id}")
     public Result get(@PathVariable Long id) {
         Video video = videoService.getById(id);
         return Result.ok(video);
     }
 
-    @ApiOperation(value = "新增")
+    @ApiOperation(value = "新增章节视频")
     @PostMapping("save")
     public Result save(@RequestBody Video video) {
         videoService.save(video);
         return Result.ok(null);
     }
 
-    @ApiOperation(value = "修改")
+    @ApiOperation(value = "修改章节视频")
     @PutMapping("update")
     public Result updateById(@RequestBody Video video) {
         videoService.updateById(video);
         return Result.ok(null);
     }
 
-    @ApiOperation(value = "删除")
+    @ApiOperation(value = "删除章节视频")
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable Long id) {
         videoService.removeById(id);

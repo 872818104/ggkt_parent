@@ -59,8 +59,8 @@ public class VodController {
 
     //删除视频
     @DeleteMapping("remove/{videoSourceId}")
-    public Result removeVideoById(@PathVariable Long videoSourceId) {
-        vodService.removeVideoById(videoSourceId);
+    public Result removeVideoById(@PathVariable String videoSourceId) {
+        vodService.removeVideo(videoSourceId);
         return Result.ok();
     }
 

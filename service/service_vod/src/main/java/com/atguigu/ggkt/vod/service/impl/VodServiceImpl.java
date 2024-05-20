@@ -38,7 +38,7 @@ public class VodServiceImpl implements VodService {
 
     // 删除视频
     @Override
-    public void removeVideoById(Long videoSourceId) {
+    public void removeVideo(String videoSourceId) {
 
     }
 

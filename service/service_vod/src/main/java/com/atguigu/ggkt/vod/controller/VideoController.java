@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Api(tags = "课程小结（课时）")
 @RestController
-@RequestMapping(value="/admin/vod/video")
+@RequestMapping(value = "/admin/vod/video")
 @CrossOrigin
 public class VideoController {
 
@@ -47,11 +47,12 @@ public class VideoController {
         return Result.ok(null);
     }
 
+    // 删除小节 删除视频
     @ApiOperation(value = "删除章节视频")
     @DeleteMapping("remove/{id}")
     public Result remove(@PathVariable Long id) {
-        videoService.removeById(id);
-        return Result.ok(null);
+        videoService.removeByVideoId(id);
+        return Result.ok();
     }
 }
 

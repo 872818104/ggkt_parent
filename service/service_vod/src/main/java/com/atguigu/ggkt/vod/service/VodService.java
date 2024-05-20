@@ -5,5 +5,5 @@ public interface VodService {
     String uploadVideo();
 
 
-    void removeVideoById(Long videoSourceId);
+    void removeVideo(String videoSourceId);
 }

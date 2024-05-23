@@ -12,30 +12,30 @@ import lombok.Data;
 @TableName("comment")
 public class Comment extends BaseEntity {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "课程id")
-	@TableField("course_id")
-	private Long courseId;
+    @ApiModelProperty(value = "课程id")
+    @TableField("course_id")
+    private Long courseId;
 
-	@ApiModelProperty(value = "讲师id")
-	@TableField("teacher_id")
-	private Long teacherId;
+    @ApiModelProperty(value = "讲师id")
+    @TableField("teacher_id")
+    private Long teacherId;
 
-	@ApiModelProperty(value = "会员id")
-	@TableField("user_id")
-	private Long userId;
+    @ApiModelProperty(value = "会员id")
+    @TableField("user_id")
+    private Long userId;
 
-	@ApiModelProperty(value = "会员昵称")
-	@TableField("nickname")
-	private String nickname;
+    @ApiModelProperty(value = "会员昵称")
+    @TableField("nickname")
+    private String nickname;
 
-	@ApiModelProperty(value = "会员头像")
-	@TableField("avatar")
-	private String avatar;
+    @ApiModelProperty(value = "会员头像")
+    @TableField("avatar")
+    private String avatar;
 
-	@ApiModelProperty(value = "评论内容")
-	@TableField("content")
-	private String content;
+    @ApiModelProperty(value = "评论内容")
+    @TableField("content")
+    private String content;
 
 }

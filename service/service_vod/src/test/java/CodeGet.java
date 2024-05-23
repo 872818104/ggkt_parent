@@ -19,16 +19,15 @@ public class CodeGet {
         String projectPath = System.getProperty("user.dir");
         //gc.setOutputDir(projectPath + "/src/main/java");
         //这里是输出生成代码的目录，这里要填电脑的绝对路径（必改）+拼接出来的路径
-        gc.setOutputDir("D:\\ideaPorject\\ggkt_parent\\service\\service_vod" + "/src/main/java");
-
+        gc.setOutputDir("D:\\ideaPorject\\ggkt_parent\\service\\service_order" + "/src/main/java");
         gc.setServiceName("%sService");    //去掉Service接口的首字母I
-        gc.setAuthor("cc");
+        gc.setAuthor("caoruhao");
         gc.setOpen(false);
         mpg.setGlobalConfig(gc);
 
         // 3、数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/classroom_vod?characterEncoding=utf-8&useSSL=false");
+        dsc.setUrl("jdbc:mysql://localhost:3306/classroom_order?characterEncoding=utf-8&useSSL=false");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
@@ -51,7 +50,7 @@ public class CodeGet {
 
         //具体生成哪些表要具体指定
         //strategy.setInclude("想要生成的表名");
-        strategy.setInclude("video_visitor");
+        strategy.setInclude("order_detail","order_info","payment_info");
 
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);//数据库表字段映射到实体的命名策略

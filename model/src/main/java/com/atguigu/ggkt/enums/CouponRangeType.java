@@ -5,16 +5,16 @@ import lombok.Getter;
 
 @Getter
 public enum CouponRangeType {
-    ALL(1,"通用"),
-   ;
+    ALL(1, "通用"),
+    ;
 
     @EnumValue
-    private final Integer code ;
-    private final String comment ;
+    private final Integer code;
+    private final String comment;
 
-    CouponRangeType(Integer code, String comment ){
-        this.code=code;
-        this.comment=comment;
+    CouponRangeType(Integer code, String comment) {
+        this.code = code;
+        this.comment = comment;
     }
 
 }

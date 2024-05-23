@@ -12,14 +12,14 @@ import lombok.Data;
 @TableName("course_collect")
 public class CourseCollect extends BaseEntity {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "课程讲师ID")
-	@TableField("course_id")
-	private Long courseId;
+    @ApiModelProperty(value = "课程讲师ID")
+    @TableField("course_id")
+    private Long courseId;
 
-	@ApiModelProperty(value = "会员ID")
-	@TableField("user_id")
-	private Long userId;
+    @ApiModelProperty(value = "会员ID")
+    @TableField("user_id")
+    private Long userId;
 
 }

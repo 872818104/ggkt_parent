@@ -22,7 +22,7 @@ import java.util.Map;
 @Api(value = "VideoVisitor管理", tags = "课程数据统计")
 @RestController
 @RequestMapping(value = "/admin/vod/videoVisitor")
-@CrossOrigin
+
 public class VideoVisitorController {
 
     @Autowired

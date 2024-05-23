@@ -12,6 +12,6 @@ import java.util.List;
 @ApiModel(description = "LiveCourseConfig")
 public class LiveCourseConfigVo extends LiveCourseConfig {
 
-	@ApiModelProperty(value = "商品列表")
-	private List<LiveCourseGoods> liveCourseGoodsList;
+    @ApiModelProperty(value = "商品列表")
+    private List<LiveCourseGoods> liveCourseGoodsList;
 }

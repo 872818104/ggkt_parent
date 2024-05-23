@@ -75,7 +75,7 @@ public class ChapterServiceImpl extends ServiceImpl<ChapterMapper, Chapter> impl
     @Override
     public void removeChapterByCourseId(Long id) {
         LambdaQueryWrapper<Chapter> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(Chapter::getCourseId,id);
+        wrapper.eq(Chapter::getCourseId, id);
         baseMapper.delete(wrapper);
     }
 }

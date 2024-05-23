@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.atguigu</groupId>
@@ -12,6 +12,7 @@
         <module>model</module>
         <module>service</module>
         <module>common</module>
+        <module>service_gateway</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -31,11 +32,8 @@
         <fastjson.version>1.2.29</fastjson.version>
         <httpclient.version>4.5.1</httpclient.version>
         <easyexcel.version>2.2.0-beta2</easyexcel.version>
-        <aliyun.version>4.5.14</aliyun.version>
         <jodatime.version>2.10.1</jodatime.version>
         <jwt.version>0.7.0</jwt.version>
-        <xxl-job.version>2.3.0</xxl-job.version>
-        <aliyun.oss.version>3.9.0</aliyun.oss.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -97,18 +95,9 @@
                 <artifactId>easyexcel</artifactId>
                 <version>${easyexcel.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.aliyun</groupId>
-                <artifactId>aliyun-java-sdk-core</artifactId>
-                <version>${aliyun.version}</version>
-            </dependency>
 
-            <!--aliyunOSS-->
-            <dependency>
-                <groupId>com.aliyun.oss</groupId>
-                <artifactId>aliyun-sdk-oss</artifactId>
-                <version>${aliyun.oss.version}</version>
-            </dependency>
+
+
 
             <!--日期时间工具-->
             <dependency>
@@ -117,11 +106,6 @@
                 <version>${jodatime.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.xuxueli</groupId>
-                <artifactId>xxl-job-core</artifactId>
-                <version>${xxl-job.version}</version>
-            </dependency>
             <!--swagger-->
             <dependency>
                 <groupId>io.springfox</groupId>

@@ -5,12 +5,12 @@ import lombok.Data;
 
 @Data
 public class BindPhoneVo {
-	
-	@ApiModelProperty(value = "手机号")
-	private String phone;
 
-	@ApiModelProperty(value = "验证码")
-	private String code;
+    @ApiModelProperty(value = "手机号")
+    private String phone;
+
+    @ApiModelProperty(value = "验证码")
+    private String code;
 
 }
 

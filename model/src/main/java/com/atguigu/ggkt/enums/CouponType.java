@@ -5,15 +5,15 @@ import lombok.Getter;
 
 @Getter
 public enum CouponType {
-    REGISTER(1,"注册"),
-    RECOMMEND(2,"推荐购买");
+    REGISTER(1, "注册"),
+    RECOMMEND(2, "推荐购买");
 
     @EnumValue
     private Integer code;
-    private String comment ;
+    private String comment;
 
-    CouponType(Integer code, String comment ){
-        this.code=code;
-        this.comment=comment;
+    CouponType(Integer code, String comment) {
+        this.code = code;
+        this.comment = comment;
     }
 }

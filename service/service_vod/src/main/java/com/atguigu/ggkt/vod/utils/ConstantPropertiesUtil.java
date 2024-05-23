@@ -10,22 +10,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConstantPropertiesUtil implements InitializingBean {
 
-    @Value("${tencent.cos.file.region}")
-    private String region;
-
-    @Value("${tencent.cos.file.secretid}")
-    private String secretId;
-
-    @Value("${tencent.cos.file.secretkey}")
-    private String secretKey;
-
-    @Value("${tencent.cos.file.bucketname}")
-    private String bucketName;
-
     public static String END_POINT;
     public static String ACCESS_KEY_ID;
     public static String ACCESS_KEY_SECRET;
     public static String BUCKET_NAME;
+    @Value("${tencent.cos.file.region}")
+    private String region;
+    @Value("${tencent.cos.file.secretid}")
+    private String secretId;
+    @Value("${tencent.cos.file.secretkey}")
+    private String secretKey;
+    @Value("${tencent.cos.file.bucketname}")
+    private String bucketName;
 
     @Override
     public void afterPropertiesSet() throws Exception {

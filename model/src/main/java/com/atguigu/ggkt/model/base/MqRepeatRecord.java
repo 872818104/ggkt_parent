@@ -11,10 +11,10 @@ import lombok.Data;
 @TableName("mq_repeat_record")
 public class MqRepeatRecord extends BaseEntity {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "业务编号")
-	@TableField("business_no")
-	private String businessNo;
+    @ApiModelProperty(value = "业务编号")
+    @TableField("business_no")
+    private String businessNo;
 
 }

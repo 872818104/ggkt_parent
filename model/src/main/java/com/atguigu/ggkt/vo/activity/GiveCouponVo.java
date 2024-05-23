@@ -8,10 +8,10 @@ import lombok.Data;
 @ApiModel(description = "领取优惠券vo")
 public class GiveCouponVo {
 
-	@ApiModelProperty(value = "购物券类型")
-	private Integer couponType;
+    @ApiModelProperty(value = "购物券类型")
+    private Integer couponType;
 
-	@ApiModelProperty(value = "优惠卷名字")
-	private Long userId;
+    @ApiModelProperty(value = "优惠卷名字")
+    private Long userId;
 
 }

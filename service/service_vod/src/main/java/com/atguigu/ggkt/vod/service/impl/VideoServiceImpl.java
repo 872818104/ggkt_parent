@@ -50,7 +50,7 @@ public class VideoServiceImpl extends ServiceImpl<VideoMapper, Video> implements
         List<Video> videoList = baseMapper.selectList(wrapper);
 
         //遍历所有小节集合得到每个小节，获取每个小节的视频id
-        for (Video video : videoList){
+        for (Video video : videoList) {
             String videoSourceId = video.getVideoSourceId();
             // 判断视频id是否为空 不为空删除腾讯云视频
             if (!StringUtils.isEmpty(videoSourceId)) {

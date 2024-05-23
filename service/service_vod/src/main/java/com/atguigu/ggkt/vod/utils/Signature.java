@@ -9,13 +9,13 @@ import java.nio.charset.StandardCharsets;
 
 @Setter
 public class Signature {
+    private static final String HMAC_ALGORITHM = "HmacSHA1"; //签名算法
+    private static final String CONTENT_CHARSET = "UTF-8";
     private String secretId;
     private String secretKey;
     private long currentTime;
     private int random;
     private int signValidDuration;
-    private static final String HMAC_ALGORITHM = "HmacSHA1"; //签名算法
-    private static final String CONTENT_CHARSET = "UTF-8";
 
     public static byte[] byteMerger(byte[] byte1, byte[] byte2) {
         byte[] byte3 = new byte[byte1.length + byte2.length];

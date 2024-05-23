@@ -12,18 +12,18 @@ import lombok.Data;
 @TableName("chapter")
 public class Chapter extends BaseEntity {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "课程ID")
-	@TableField("course_id")
-	private Long courseId;
+    @ApiModelProperty(value = "课程ID")
+    @TableField("course_id")
+    private Long courseId;
 
-	@ApiModelProperty(value = "章节名称")
-	@TableField("title")
-	private String title;
+    @ApiModelProperty(value = "章节名称")
+    @TableField("title")
+    private String title;
 
-	@ApiModelProperty(value = "显示排序")
-	@TableField("sort")
-	private Integer sort;
+    @ApiModelProperty(value = "显示排序")
+    @TableField("sort")
+    private Integer sort;
 
 }

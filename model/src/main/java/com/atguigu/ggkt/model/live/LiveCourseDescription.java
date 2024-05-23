@@ -12,14 +12,14 @@ import lombok.Data;
 @TableName("live_course_description")
 public class LiveCourseDescription extends BaseEntity {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@ApiModelProperty(value = "课程ID")
-	@TableField("live_course_id")
-	private Long liveCourseId;
+    @ApiModelProperty(value = "课程ID")
+    @TableField("live_course_id")
+    private Long liveCourseId;
 
-	@ApiModelProperty(value = "课程简介")
-	@TableField("description")
-	private String description;
+    @ApiModelProperty(value = "课程简介")
+    @TableField("description")
+    private String description;
 
 }

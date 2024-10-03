@@ -23,7 +23,7 @@ import java.util.Map;
 @RestController
 @RequestMapping(value = "/admin/vod/videoVisitor")
 
-public class VideoVisitorController {
+public class       VideoVisitorController {
 
     @Autowired
     private VideoVisitorService videoVisitorService;

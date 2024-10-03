@@ -28,7 +28,7 @@ public class ChapterController {
     @Autowired
     private ChapterService chapterService;
 
-    // 1.获取章节小结列表
+    //1.获取章节小结列表
     @ApiOperation("获取章节小结列表")
     @GetMapping("getChapterTreeList/{courseId}")
     public Result getChapter(@PathVariable Long courseId) {
